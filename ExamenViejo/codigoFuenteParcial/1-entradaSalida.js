@@ -4,11 +4,17 @@ function Mostrar()
 	
     var base;
     var perimetro;
-
+    
     base = parseFloat(document.getElementById("lado").value);
-    perimetro = base * 3;
+    if(isNaN(base) || base == Infinity || base < 0){
+        alert("Dato invalido.")
+    }
+    else{
+        perimetro = base * 3;
+        alert("El perimetro es: " + perimetro.toFixed(2));
+    }
 
-    console.log(perimetro.toFixed(2));
+
 
 	
 }

@@ -5,8 +5,19 @@ function Mostrar()
     var segundoNumero;
     var resultado;
 
-    primerNumero = parseFloat(prompt("Ingrese un numero"));
-    segundoNumero = parseFloat(prompt("Ingrese otro numero"));
+    
+    do{
+        primerNumero = parseFloat(prompt("Ingrese un numero"));
+        if(isNaN(primerNumero) || primerNumero == Infinity){
+            alert("Dato invalido.")
+        }
+    }while(isNaN(primerNumero) || primerNumero == Infinity)
+    do{
+        segundoNumero = parseFloat(prompt("Ingrese otro numero"));
+        if(isNaN(segundoNumero) || segundoNumero == Infinity){
+            alert("Dato invalido.")
+        }
+    }while(isNaN(segundoNumero) || segundoNumero == Infinity)
 
 
     if (primerNumero == segundoNumero){

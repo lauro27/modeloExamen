@@ -6,8 +6,13 @@ function Mostrar()
     var importeFianl;
 
     importeSinIva = parseFloat(prompt("Ingrese el importe."));
-    importeFianl = importeSinIva + (importeSinIva * porcetanjeDeIva / 100);
-    document.getElementById("importe").value = importeFianl.toFixed(2);
+
+    if(isNaN(importeSinIva) || importeSinIva == Infinity || importeSinIva < 0 ){
+        alert("Dato invalido.")
+    }else{
+        importeFianl = importeSinIva + (importeSinIva * porcetanjeDeIva / 100);
+        document.getElementById("importe").value = importeFianl.toFixed(2);
+    }
 
 }
 

@@ -10,11 +10,16 @@ function Mostrar()
 
     largoDelTerreno = parseFloat(document.getElementById("largo").value);
     anchoDelTerreno = parseFloat(document.getElementById("ancho").value);
-
     perimetroDelTerreno = (largoDelTerreno * 2)+(anchoDelTerreno *2);
     metrosDeAlambre = perimetroDelTerreno * vueltasDeAlambre;
 
-    alert("Necesita " + metrosDeAlambre + " metros de alambre");
+    if(isNaN(metrosDeAlambre) || metrosDeAlambre == Infinity || metrosDeAlambre < 0 ){
+        alert("Datos invalidos.")
+    }else{
+        alert("Necesita " + metrosDeAlambre + " metros de alambre");
+    }
+
+
 
 		
 }
